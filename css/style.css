@@ -1,24 +1,20 @@
 html {
   font-size: 16px;
 }
-
 body {
   background: #2c3e50;
   box-sizing: border-box;
   transition: all 0.25s ease-in;
 }
-
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
-
 a {
   color: white;
   text-decoration: none;
 }
-
 .menu-wrapper {
   position: absolute;
   top: 50%;
@@ -29,7 +25,6 @@ a {
   margin-top: -15rem;
   margin-left: -15rem;
 }
-
 .menu {
   width: 100%;
   height: 100%;
@@ -52,14 +47,12 @@ a {
   z-index: 5;
 }
 .menu li.spin .icon-holder {
-  -webkit-animation: spin 0.7s linear forwards;
   animation: spin 0.7s linear forwards;
 }
 .menu li.spin .circle-holder {
   display: block;
 }
 .menu li.spin .circle-holder circle {
-  -webkit-animation: dash 0.7s linear forwards;
   animation: dash 0.7s linear forwards;
 }
 .menu a {
@@ -80,7 +73,6 @@ a {
 .menu.open {
   transform: scale(1);
 }
-
 .icon-holder {
   position: relative;
   z-index: 1;
@@ -88,7 +80,6 @@ a {
   width: 4rem;
   height: 100%;
 }
-
 .circle-holder {
   position: absolute;
   top: 50%;
@@ -109,16 +100,15 @@ a {
   stroke-dashoffset: 560;
   stroke-linecap: round;
 }
-
 .menu-btn {
   position: absolute;
   top: 54%;
   left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 10;
   display: block;
   width: 4rem;
   height: 4rem;
+  margin: -2rem;
   padding: 1.3rem;
   background: white;
   border: none;
@@ -126,8 +116,6 @@ a {
   border-radius: 100%;
   text-align: center;
   line-height: 1;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   outline: none;
   cursor: pointer;
@@ -146,28 +134,21 @@ a {
 .menu-btn i:nth-child(2) {
   margin: 0.34rem auto;
 }
-
 .clicked.menu-btn {
-  -webkit-animation: buttonactive ease-in 0.2s forwards 1;
   animation: buttonactive ease-in 0.2s forwards 1;
 }
 .clicked.menu-btn i:first-child {
-  -webkit-animation: top-down ease-in 0.2s forwards 1;
   animation: top-down ease-in 0.2s forwards 1;
 }
 .clicked.menu-btn i:nth-child(2) {
-  -webkit-animation: middle ease-in 0.01s forwards 1;
   animation: middle ease-in 0.01s forwards 1;
 }
 .clicked.menu-btn i:nth-child(3) {
-  -webkit-animation: down-top ease-in 0.2s forwards 1;
   animation: down-top ease-in 0.2s forwards 1;
 }
 .clicked .ripple {
-  -webkit-animation: ripples ease-in 0.35s forwards 1;
   animation: ripples ease-in 0.35s forwards 1;
 }
-
 .ripple {
   position: absolute;
   top: -1rem;
@@ -181,7 +162,6 @@ a {
   border: 2rem solid white;
   border-radius: 100%;
 }
-
 .menu li:nth-child(1) {
   transform: rotate(0deg);
 }
@@ -192,11 +172,9 @@ a {
 .menu li:nth-child(1) circle {
   stroke: #2980b9;
 }
-
 .bg-0 {
   background: #2980b9;
 }
-
 .menu li:nth-child(2) {
   transform: rotate(71.5deg);
 }
@@ -207,11 +185,9 @@ a {
 .menu li:nth-child(2) circle {
   stroke: #c0392b;
 }
-
 .bg-1 {
   background: #c0392b;
 }
-
 .menu li:nth-child(3) {
   transform: rotate(143deg);
 }
@@ -222,11 +198,9 @@ a {
 .menu li:nth-child(3) circle {
   stroke: #1abc9c;
 }
-
 .bg-2 {
   background: #1abc9c;
 }
-
 .menu li:nth-child(4) {
   transform: rotate(214.5deg);
 }
@@ -237,11 +211,9 @@ a {
 .menu li:nth-child(4) circle {
   stroke: #f39c12;
 }
-
 .bg-3 {
   background: #f39c12;
 }
-
 .menu li:nth-child(5) {
   transform: rotate(286deg);
 }
@@ -252,26 +224,9 @@ a {
 .menu li:nth-child(5) circle {
   stroke: #8e44ad;
 }
-
 .bg-4 {
   background: #8e44ad;
 }
-
-@-webkit-keyframes spin {
-  0% {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-  80% {
-    transform: rotate(360deg);
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(360deg);
-    opacity: 0;
-  }
-}
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -283,22 +238,6 @@ a {
   }
   100% {
     transform: rotate(360deg);
-    opacity: 0;
-  }
-}
-@-webkit-keyframes dash {
-  0% {
-    stroke-dashoffset: 560;
-    stroke-width: 4rem;
-  }
-  80% {
-    stroke-dashoffset: 0;
-    stroke-width: 4rem;
-    opacity: 1;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    stroke-width: 6rem;
     opacity: 0;
   }
 }
@@ -318,16 +257,6 @@ a {
     opacity: 0;
   }
 }
-@-webkit-keyframes buttonactive {
-  0% {
-    background: white;
-    transform: rotate(0deg);
-  }
-  100% {
-    background: #4f6f8f;
-    transform: rotate(-90deg);
-  }
-}
 @keyframes buttonactive {
   0% {
     background: white;
@@ -336,16 +265,6 @@ a {
   100% {
     background: #4f6f8f;
     transform: rotate(-90deg);
-  }
-}
-@-webkit-keyframes middle {
-  0% {
-    opacity: 1;
-    left: 0;
-  }
-  100% {
-    opacity: 0;
-    left: -4rem;
   }
 }
 @keyframes middle {
@@ -358,16 +277,6 @@ a {
     left: -4rem;
   }
 }
-@-webkit-keyframes top-down {
-  0% {
-    top: 0;
-    transform: rotate(0);
-  }
-  100% {
-    top: 0.35rem;
-    transform: rotate(-45deg);
-  }
-}
 @keyframes top-down {
   0% {
     top: 0;
@@ -376,16 +285,6 @@ a {
   100% {
     top: 0.35rem;
     transform: rotate(-45deg);
-  }
-}
-@-webkit-keyframes down-top {
-  0% {
-    top: 0;
-    transform: rotate(0);
-  }
-  100% {
-    top: -0.4rem;
-    transform: rotate(45deg);
   }
 }
 @keyframes down-top {
@@ -398,18 +297,6 @@ a {
     transform: rotate(45deg);
   }
 }
-@-webkit-keyframes ripples {
-  0% {
-    opacity: 1;
-    transform: scale(0.5);
-    border-width: 3rem;
-  }
-  100% {
-    opacity: 0.5;
-    transform: scale(1);
-    border-width: 0rem;
-  }
-}
 @keyframes ripples {
   0% {
     opacity: 1;
@@ -420,11 +307,6 @@ a {
     opacity: 0.5;
     transform: scale(1);
     border-width: 0rem;
-  }
-}
-@-webkit-keyframes bouncein {
-  to {
-    transform: scale(1);
   }
 }
 @keyframes bouncein {
